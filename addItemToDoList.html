@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>My List To Do</h1>
+    <ul id="mylist">
+        
+    </ul>
+    Enter: <input id="item-input">
+    <button id="addbutton">add</button>
+
+    <script>
+        function addItem(event) {
+            let itemInput = document.querySelector("#item-input");
+            let newInput = itemInput.value;
+            let listItem = document.createElement("li");
+            listItem.textContent = newInput;
+            document.querySelector("#mylist").appendChild(listItem);
+        }
+        let button = document.getElementById("addbutton");
+        button.addEventListener('click', addItem);
+
+        
+    </script>
+</body>
+</html>
